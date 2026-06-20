@@ -1,0 +1,51 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rsu-jlo-laravel
+    container_name: rsu_app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - mysql
+    networks:
+      - rsu_network
+
+  nginx:
+    image: nginx:latest
+    container_name: rsu_nginx
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+    networks:
+      - rsu_network
+
+  mysql:
+    image: mysql:8.0
+    container_name: rsu_mysql
+    restart: unless-stopped
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: proyecto_final_tads
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+    volumes:
+      - rsu_mysql_data:/var/lib/mysql
+    networks:
+      - rsu_network
+
+networks:
+  rsu_network:
+    driver: bridge
+
+volumes:
+  rsu_mysql_data:zW

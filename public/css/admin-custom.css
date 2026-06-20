@@ -1,0 +1,208 @@
+/* COLORES BASE */
+:root {
+    --azul-oscuro: #001f42;
+    --azul-medio: #003b78;
+    --azul-claro: #0088ce;
+}
+
+/* CONTENEDOR DEL LOGO */
+.brand-link {
+    background: #ffffff !important;
+    height: 72px !important;
+    min-height: 72px !important;
+    max-height: 72px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-bottom: 4px solid var(--azul-claro) !important;
+    overflow: hidden !important;
+}
+
+/* LOGO DEL SIDEBAR */
+.brand-link .jlo-logo-sidebar {
+    display: block !important;
+    width: 185px !important;
+    max-width: 185px !important;
+    height: auto !important;
+    max-height: 64px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    object-fit: contain !important;
+    opacity: 1 !important;
+}
+
+/* BARRA SUPERIOR ALINEADA CON EL LOGO */
+.main-header.navbar {
+    background-color: var(--azul-oscuro) !important;
+    height: 72px !important;
+    min-height: 72px !important;
+    max-height: 72px !important;
+    border-bottom: 4px solid var(--azul-claro) !important;
+}
+
+/* TEXTO E ÍCONOS DE LA BARRA SUPERIOR */
+.main-header .nav-link,
+.main-header .navbar-nav .nav-link,
+.main-header .navbar-nav .nav-link i {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+/* SIDEBAR */
+.main-sidebar,
+.sidebar {
+    background-color: var(--azul-oscuro) !important;
+}
+
+/* OPCIONES DEL MENÚ */
+.nav-sidebar .nav-link {
+    color: #ffffff !important;
+    border-radius: 6px !important;
+    margin: 4px 8px !important;
+    transition: all 0.2s ease;
+}
+
+/* HOVER */
+.nav-sidebar .nav-link:hover {
+    background-color: var(--azul-medio) !important;
+    color: #ffffff !important;
+}
+
+/* ====================================
+   MÓDULO PRINCIPAL ACTIVO
+==================================== */
+
+.nav-sidebar > .nav-item.menu-open > .nav-link {
+    background-color: var(--azul-medio) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+/* ====================================
+   SUBMÓDULO ACTIVO
+==================================== */
+
+.nav-treeview .nav-link.active {
+    background-color: var(--azul-claro) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-left: 4px solid #ffffff;
+    padding-left: 14px !important;
+}
+
+/* ====================================
+   SUBMÓDULOS NORMALES
+==================================== */
+
+.nav-treeview .nav-link {
+    background-color: #002f63 !important;
+    color: #ffffff !important;
+    margin-left: 16px !important;
+}
+
+/* ====================================
+   HOVER SUBMÓDULOS
+==================================== */
+
+.nav-treeview .nav-link:hover {
+    background-color: #006fb3 !important;
+}
+
+/* FONDO GENERAL */
+.content-wrapper {
+    background-color: #eef4f9 !important;
+}
+
+/* AJUSTE PARA QUE EL CONTENIDO BAJE SEGÚN EL NUEVO ALTO */
+.content-wrapper {
+    min-height: calc(100vh - 72px) !important;
+}
+
+/* Select2 como input normal */
+.select2-container--bootstrap4 .select2-selection--single {
+    height: 48px !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 6px !important;
+    background-color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.select2-container--bootstrap4
+    .select2-selection--single
+    .select2-selection__rendered {
+    color: #495057 !important;
+    line-height: normal !important;
+    padding-left: 12px !important;
+}
+
+.select2-container--bootstrap4
+    .select2-selection--single
+    .select2-selection__arrow {
+    height: 46px !important;
+    right: 10px !important;
+}
+
+.select2-container--bootstrap4 .select2-selection__placeholder {
+    color: #6c757d !important;
+}
+
+.attendance-record-item {
+    border: 1px solid #dee2e6;
+    border-left: 4px solid #0088ce;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    background-color: #ffffff;
+}
+
+.badge-custom {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+}
+
+/* Centrar contenido de tablas */
+table.dataTable th,
+table.dataTable td {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+/* Centrar imágenes reales */
+table.dataTable td img {
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+/* Centrar placeholders de imagen */
+table.dataTable td .bg-light.d-flex {
+    margin: 0 auto !important;
+}
+
+/* Centrar círculos/cuadros de color */
+table.dataTable td span[style*="background"],
+table.dataTable td div[style*="background"] {
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+/* Centrar grupo color + texto */
+table.dataTable td {
+    white-space: nowrap;
+}
+
+.card-body.table-responsive {
+    overflow-x: auto;
+}
+
+table.dataTable {
+    width: 100% !important;
+}
+
+.dataTables_wrapper {
+    width: 100%;
+}

@@ -1,0 +1,35 @@
+@import "./auth.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+.jlo-brand {
+    height: 64px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.jlo-sidebar-logo {
+    max-height: 52px !important;
+    width: auto !important;
+    opacity: 1 !important;
+}
+
+.main-sidebar {
+    background-color: #001625 !important;
+}
+
+.nav-sidebar .nav-item > .nav-link {
+    font-size: 14px;
+    white-space: normal !important;
+}
+
+.nav-sidebar .nav-treeview > .nav-item > .nav-link {
+    padding-left: 28px;
+}
