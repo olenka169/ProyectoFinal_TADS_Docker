@@ -48,4 +48,4 @@ networks:
     driver: bridge
 
 volumes:
-  rsu_mysql_data:
+  rsu_mysql_data:zW
